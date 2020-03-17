@@ -1,0 +1,23 @@
+{{-- LAYOUT ADAPTADO DO PROFESSOR DR. LUCIANO SOARES DE SOUZA. DISPONÍVEL EM: https://github.com/luciano-professor/if --}}
+
+@include('admin.layouts.header')
+
+@include('admin.layouts.menu')
+
+<div class="container">
+
+    <div class="mt-3">
+        <h3>
+            @yield('titulo')
+            <small class="text-muted">@yield('acao')</small>
+        </h3>
+    </div>
+
+    {{-- Abaixo vamos colocar a parte principal que mudará para cada view --}}
+    {{-- O yeild define uma área onde será inserido uma seção com conteudo dinamico --}}
+    @yield('conteudo-principal')
+
+
+</div> {{-- Container --}}
+
+@include('admin.layouts.footer')
